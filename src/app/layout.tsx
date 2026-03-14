@@ -3,8 +3,8 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "AI Gallery by mshrynzw",
-  description: "AI Gallery by mshrynzw（Next.js SSG）",
+  title: "Gallery by mshrynzw",
+  description: "Gallery by mshrynzw（Next.js SSG）",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
