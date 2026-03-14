@@ -17,7 +17,7 @@ export function Header() {
               href="/"
               className="text-center text-2xl font-serif hover:opacity-80"
             >
-              Gallery
+              AI Gallery by mshrynzw
             </Link>
             <button
               onClick={() => setIsInfoModalOpen(true)}
