@@ -48,7 +48,7 @@ export function ImageDetailClient({
           href={image.path}
           download={filename}
           className="rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
-          aria-label="画像をダウンロード"
+          aria-label={image.type === "video" ? "動画をダウンロード" : "画像をダウンロード"}
         >
           <Download className="h-6 w-6" />
         </a>
@@ -82,15 +82,26 @@ export function ImageDetailClient({
       )}
 
       <div className="relative mx-auto max-h-[90vh] max-w-[90vw]">
-        <Image
-          src={image.path}
-          alt="Gallery image"
-          width={1080}
-          height={1080}
-          className="max-h-[90vh] max-w-[90vw] object-contain"
-          style={{ aspectRatio: image.aspectRatio }}
-          priority
-        />
+        {image.type === "video" ? (
+          <video
+            src={image.path}
+            controls
+            autoPlay
+            playsInline
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+            style={{ aspectRatio: image.aspectRatio }}
+          />
+        ) : (
+          <Image
+            src={image.path}
+            alt="Gallery image"
+            width={1080}
+            height={1080}
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+            style={{ aspectRatio: image.aspectRatio }}
+            priority
+          />
+        )}
       </div>
     </div>
   );

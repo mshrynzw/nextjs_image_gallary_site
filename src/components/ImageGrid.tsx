@@ -14,6 +14,7 @@ export function ImageGrid({ images }: ImageGridProps) {
           id={image.id}
           path={image.path}
           aspectRatio={image.aspectRatio}
+          type={image.type}
         />
       ))}
     </div>

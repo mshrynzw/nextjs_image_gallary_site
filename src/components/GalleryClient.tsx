@@ -55,7 +55,7 @@ export function GalleryClient({
           </div>
         )}
         {!hasMore && images.length > 0 && (
-          <p className="text-center text-gray-500">All images have been displayed</p>
+          <p className="text-center text-gray-500">すべて表示しました</p>
         )}
       </div>
     </>
